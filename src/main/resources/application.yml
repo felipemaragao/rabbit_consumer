@@ -1,0 +1,22 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: logUser
+    password: logPwd
+    virtual-host: EnterpriseLog
+
+server:
+  port: 8081
+
+keycloak:
+  realm: SpringBootKeycloak
+  auth-server-url: http://localhost:8888/auth
+  keycloak:
+    ssl-required: external
+  resource: springboot-microservice
+  credentials:
+    secret: fc33d6ce-df4d-465b-88e5-7885b0b06311
+  use-resource-role-mappings: true
+  bearer-only: true
+
